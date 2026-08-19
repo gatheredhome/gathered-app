@@ -1,0 +1,31 @@
+{
+  "id": "./",
+  "name": "Gathered",
+  "short_name": "Gathered",
+  "description": "A calmer way to tend home and family.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4EFE6",
+  "theme_color": "#F4EFE6",
+  "icons": [
+    {
+      "src": "gathered-icon-192-v3.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "gathered-icon-512-v3.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "gathered-maskable-512-v3.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
