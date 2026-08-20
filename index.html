@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F4EFE6"><title>Gathered</title><link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="app-shell"><main>
+<section class="screen active" data-screen="today">
+<header class="topbar"><div><div class="eyebrow">GATHERED</div><h1>Good morning, Emi.</h1><p class="muted" id="dateLine"></p></div><button class="ghost-button" id="simplifyBtn">Simplify today</button></header>
+<section class="rhythm-card" id="rhythmCard"><div><div class="section-label">GATHERED RHYTHM</div><div class="rhythm-main"><span id="rhythmCount">0</span> days in rhythm 🌿</div><div class="tiny" id="monthCount"></div></div><div class="week-dots" id="weekDots"></div></section>
+<section class="hero-card"><div class="section-label">TODAY'S ANCHOR</div><h2 id="anchorText"></h2><div class="hero-actions"><button class="text-button" id="changeAnchorBtn">Change</button><button class="primary-inline" id="resetBtn">10-minute reset</button></div></section>
+<section class="card"><div class="card-head"><div><span class="section-label">TENDING</span><div class="tiny">Only what matters today</div></div><button class="text-button no-pad" id="addTendingBtn">+ Add</button></div><div id="todayTending"></div></section>
+<section class="card"><div class="card-head"><div><span class="section-label">MEALS</span><div class="tiny">Today</div></div><button class="text-button no-pad" id="editMealsBtn">Edit</button></div><div id="mealSummary"></div></section>
+<section class="card clickable" id="stewardshipCard"><div class="card-head"><span class="section-label">HOME STEWARDSHIP</span><span class="tiny">Worth tending ›</span></div><div id="stewardshipToday"></div></section>
+<section class="card scripture-card clickable" id="scriptureCard"><div class="card-head"><span class="section-label">SCRIPTURE</span><span class="tiny">Open Bible ›</span></div><p class="verse">“Whatever you do, work at it with all your heart...”</p><p class="muted">Colossians 3:23</p><p class="small">Faithfulness in ordinary work matters too.</p></section>
+<section class="card warm"><div class="card-head"><span class="section-label">MAKE TODAY SPECIAL</span><button class="text-button no-pad" id="newSpecialBtn">Another idea</button></div><h3 id="specialIdea"></h3></section>
+</section>
+
+<section class="screen" data-screen="faith">
+<header class="subheader"><button class="back-btn" data-go="today">‹ Today</button><div><div class="eyebrow">FAITH & BIBLE</div><h1>Stay in the Word.</h1></div></header>
+<section class="faith-hero"><div class="section-label">TODAY'S SCRIPTURE</div><h2>Colossians 3:23</h2><p class="verse full">Whatever you do, work heartily, as for the Lord, and not for men.</p><div class="tiny">World English Bible · public domain</div><div class="action-row"><button class="primary-inline" id="highlightToday">Highlight</button><button class="text-button no-pad" id="noteToday">Add note</button></div></section>
+<div class="faith-tabs"><button class="pill selected" data-faith-tab="history">Daily Scriptures</button><button class="pill" data-faith-tab="reader">Bible Reader</button><button class="pill" data-faith-tab="notes">Highlights & Notes</button><button class="pill" data-faith-tab="lessons">Lessons</button></div>
+<div id="faithContent"></div>
+</section>
+
+<section class="screen" data-screen="commonplace"><header class="simple-header"><div><div class="eyebrow">COMMONPLACE</div><h1>Things worth keeping.</h1><p class="muted">Research, Scripture, recipes, ideas, notes, and things you want to remember.</p></div></header><div class="empty-state"><strong>Commonplace is coming next.</strong><p class="muted small">The Today + Faith experience is being built first.</p></div></section>
+<section class="screen" data-screen="seasonal"><header class="simple-header"><div><div class="eyebrow">SEASONAL</div><h1>August at home.</h1><p class="muted">Home · Kitchen · Garden · Kids · Celebrate · Faith · Notice</p></div></header><div class="empty-state">Seasonal is coming next.</div></section>
+<section class="screen" data-screen="household"><header class="simple-header"><div><div class="eyebrow">HOUSEHOLD</div><h1>Tend the home.</h1><p class="muted">Stewardship · Rooms · Systems · Projects · Home Reference</p></div></header><div class="house-list"><button class="house-card" id="openWaterGuide">💧 <span><strong>Main water shutoff</strong><small>Learn, locate, and save yours</small></span></button><button class="house-card">🌿 <span><strong>Stewardship</strong><small>Maintenance and prevention library</small></span></button><button class="house-card">🚪 <span><strong>Rooms & areas</strong><small>Your actual home, organized simply</small></span></button></div></section>
+</main>
+<nav class="bottom-nav"><button data-go="today" class="active"><span>⌂</span><small>Today</small></button><button data-go="commonplace"><span>▤</span><small>Commonplace</small></button><button class="add-button" id="quickAddOpen">＋</button><button data-go="seasonal"><span>◌</span><small>Seasonal</small></button><button data-go="household"><span>⌂</span><small>Household</small></button></nav></div>
+<dialog id="dialog"><div class="dialog-card"><div class="dialog-head"><div><div class="eyebrow" id="dialogEyebrow"></div><h2 id="dialogTitle"></h2></div><button class="icon-button" id="dialogClose">×</button></div><div id="dialogBody"></div></div></dialog>
+<script src="app.js?v=03"></script></body></html>
