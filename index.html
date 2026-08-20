@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f6f1e7">
+  <title>Gathered</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <main id="app"></main>
+  <nav class="bottom-nav" aria-label="Primary">
+    <button data-nav="today"><span>⌂</span><small>Today</small></button>
+    <button data-nav="commonplace"><span>▤</span><small>Commonplace</small></button>
+    <button class="add" id="quickAdd" aria-label="Quick add">＋</button>
+    <button data-nav="seasonal"><span>☼</span><small>Seasonal</small></button>
+    <button data-nav="household" class="active"><span>⌂</span><small>Household</small></button>
+  </nav>
+</div>
+<dialog id="sheet"><div id="sheetBody"></div></dialog>
+<script src="app.js"></script>
+</body>
+</html>
