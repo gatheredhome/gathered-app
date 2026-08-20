@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F7F2E9">
+<title>Gathered</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <main>
+    <section class="screen active" data-screen="today">
+      <header class="hero-header">
+        <div>
+          <h1>Good morning,<br>Emi</h1>
+          <p id="dateLine"></p>
+        </div>
+        <div class="botanical">❧</div>
+      </header>
+
+      <section class="rhythm-panel">
+        <div class="eyebrow">GATHERED RHYTHM</div>
+        <div class="rhythm-week" id="rhythmWeek"></div>
+        <div class="rhythm-meta"><span id="rhythmText">0 days in rhythm this week</span><span>·</span><span id="monthText">0 tended this month</span></div>
+      </section>
+
+      <section class="focus-card">
+        <div>
+          <div class="eyebrow">TODAY'S FOCUS</div>
+          <h2 id="anchorText">Reset the kitchen<br>before dinner.</h2>
+          <div class="focus-actions">
+            <span class="time-pill">◷ 10 min</span>
+            <button id="resetBtn" class="link-btn">Start reset</button>
+          </div>
+        </div>
+        <button id="changeAnchorBtn" class="round-icon">❧</button>
+      </section>
+
+      <div class="section-title">TODAY AT A GLANCE</div>
+      <div class="at-glance">
+        <button class="glance-row" id="openTending">
+          <span class="row-icon">✓</span>
+          <span class="row-copy"><strong>Tending</strong><small id="tendingSummary">0 of 0 tasks done</small></span>
+          <span class="chev">›</span>
+        </button>
+        <button class="glance-row" id="openDinner">
+          <span class="row-icon">♨</span>
+          <span class="row-copy"><strong>Dinner</strong><small id="dinnerText">Chicken soup + sourdough</small></span>
+          <span class="chev">›</span>
+        </button>
+        <button class="glance-row" id="openStewardship">
+          <span class="row-icon">⌂</span>
+          <span class="row-copy"><strong>For Your Home</strong><small>Find your main water shutoff</small></span>
+          <span class="chev">›</span>
+        </button>
+        <button class="glance-row" id="openScripture">
+          <span class="row-icon">✝</span>
+          <span class="row-copy"><strong>Scripture</strong><small>Colossians 3:23</small></span>
+          <span class="chev">›</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="faith">
+      <header class="subnav"><button data-go="today">‹</button><strong>Scripture</strong><button class="menu-dot">•••</button></header>
+      <div class="faith-page">
+        <div class="center eyebrow">TODAY'S WORD</div>
+        <h2 class="faith-title">Colossians 3:23</h2>
+        <div class="center botanical tinybot">❧</div>
+        <blockquote>Whatever you do, work heartily, as for the Lord and not for men.</blockquote>
+        <div class="center source">World English Bible</div>
+
+        <div class="faith-actions">
+          <button id="reflectBtn"><span>♡</span><small>Reflect</small></button>
+          <button id="highlightBtn"><span>✎</span><small>Highlight</small></button>
+          <button id="noteBtn"><span>▤</span><small>Note</small></button>
+        </div>
+
+        <div class="section-title">GO DEEPER</div>
+        <div class="deeper-list">
+          <button id="readChapter"><span>📖</span><div><strong>Read Colossians 3</strong><small>Read the full chapter</small></div><b>›</b></button>
+          <button id="myNotes"><span>📝</span><div><strong>My Notes</strong><small>Your thoughts & prayers</small></div><b>›</b></button>
+          <button id="previousScriptures"><span>◷</span><div><strong>Previous Scriptures</strong><small>See your daily journey</small></div><b>›</b></button>
+          <button id="bibleLessons"><span>✧</span><div><strong>Bible Lessons</strong><small>Grow in the Word</small></div><b>›</b></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="reader">
+      <header class="subnav"><button data-go="faith">‹</button><strong>Colossians 3</strong><button class="menu-dot">•••</button></header>
+      <div class="reader-tools"><span>☼</span><span>Aa</span></div>
+      <article class="bible-reader" id="bibleReader"></article>
+      <nav class="reader-nav"><button>📖<small>Read</small></button><button id="readerNotes">✎<small>Notes</small></button><button>▤<small>Highlights</small></button><button>⌕<small>Search</small></button></nav>
+    </section>
+
+    <section class="screen" data-screen="household">
+      <header class="subnav"><button data-go="today">‹</button><strong>Home Stewardship</strong><button class="menu-dot">•••</button></header>
+      <div class="steward-page">
+        <h2>Main water shutoff</h2>
+        <p class="lede">Find it before you need it.</p>
+        <div class="house-sketch">⌂</div>
+
+        <div class="section-title">WHAT IT LOOKS LIKE</div>
+        <div class="valve-grid">
+          <div class="valve-card"><div class="gate-art"><span></span></div><strong>Gate valve</strong><small>(round wheel)</small></div>
+          <div class="valve-card"><div class="ball-art"><span></span></div><strong>Ball valve</strong><small>(straight lever)</small></div>
+        </div>
+
+        <div class="section-title">WHERE TO LOOK</div>
+        <ol class="look-list">
+          <li>Where the water line enters your home</li>
+          <li>Basement wall facing the street</li>
+          <li>Near your water meter</li>
+          <li>Utility room or crawl space</li>
+        </ol>
+
+        <div class="safety-note">💡 Don’t force a stuck, corroded, or leaking valve. If unsure, call a licensed plumber.</div>
+        <button class="cta" id="foundMine">✓ I found mine</button>
+        <button class="subtle-btn" id="cantFind">Still can’t find it?</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="commonplace">
+      <header class="hero-header small-head"><div><div class="eyebrow">COMMONPLACE</div><h1>Things worth<br>keeping.</h1></div></header>
+      <div class="placeholder-card">This section is next after the Today redesign is stable.</div>
+    </section>
+
+    <section class="screen" data-screen="seasonal">
+      <header class="hero-header small-head"><div><div class="eyebrow">SEASONAL</div><h1>August<br>at home.</h1></div></header>
+      <div class="placeholder-card">Seasonal will use this same visual language.</div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button data-go="today" class="active"><span>⌂</span><small>Today</small></button>
+    <button data-go="commonplace"><span>▤</span><small>Commonplace</small></button>
+    <button class="add-button" id="quickAdd">＋</button>
+    <button data-go="seasonal"><span>❧</span><small>Seasonal</small></button>
+    <button data-go="household"><span>⌂</span><small>Household</small></button>
+  </nav>
+</div>
+
+<dialog id="sheet">
+  <div class="sheet">
+    <div class="grab"></div>
+    <button class="close-sheet" id="closeSheet">×</button>
+    <div id="sheetBody"></div>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
