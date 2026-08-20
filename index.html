@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F7F2E9">
+<title>Gathered</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<main>
+<section class="screen active" data-screen="today">
+<header class="hero-header">
+<div><h1>Good morning,<br>Emi</h1><p id="dateLine"></p></div>
+</header>
+
+<section class="rhythm-panel">
+<div class="eyebrow">GATHERED RHYTHM</div>
+<div class="rhythm-week" id="rhythmWeek"></div>
+<div class="rhythm-meta"><span id="rhythmText"></span><span>·</span><span id="monthText"></span></div>
+</section>
+
+<section class="focus-card">
+<div>
+<div class="eyebrow">TODAY'S FOCUS</div>
+<h2 id="anchorText"></h2>
+<div class="focus-actions"><span class="time-pill">◷ 10 min</span><button id="resetBtn" class="link-btn">Start reset</button></div>
+</div>
+<button id="changeAnchorBtn" class="round-icon">✦</button>
+</section>
+
+<div class="section-title">TODAY AT A GLANCE</div>
+<div class="at-glance">
+<button class="glance-row" id="openTending"><span class="row-icon">✓</span><span class="row-copy"><strong>Tending</strong><small id="tendingSummary"></small></span><span class="chev">›</span></button>
+<button class="glance-row" id="openDinner"><span class="row-icon">♨</span><span class="row-copy"><strong>Dinner</strong><small id="dinnerText"></small></span><span class="chev">›</span></button>
+<button class="glance-row" data-go="household"><span class="row-icon">⌂</span><span class="row-copy"><strong>For Your Home</strong><small id="homeSummary">One thing worth knowing today</small></span><span class="chev">›</span></button>
+<button class="glance-row" data-go="faith"><span class="row-icon">✝</span><span class="row-copy"><strong>Scripture</strong><small>Colossians 3:23</small></span><span class="chev">›</span></button>
+</div>
+</section>
+
+<section class="screen" data-screen="household">
+<header class="house-header">
+<div><div class="eyebrow">HOUSEHOLD</div><h1>Know your home.<br>Tend it well.</h1><p>Maintenance, projects, systems, and the little things that are easy to forget.</p></div>
+</header>
+
+<section class="house-feature" id="nextStewardship">
+<div class="feature-top"><span class="feature-icon">⌂</span><span class="status-chip">NEXT TO TEND</span></div>
+<h2 id="nextStewardshipTitle">Find your main water shutoff</h2>
+<p id="nextStewardshipWhy">Know where it is before an emergency.</p>
+<div class="feature-actions"><button id="learnNext">Learn</button><button id="completeNext">Mark done</button></div>
+</section>
+
+<div class="house-grid">
+<button class="house-tile" data-house-section="stewardship"><span>✓</span><strong>Stewardship</strong><small>Maintenance & homeowner know-how</small></button>
+<button class="house-tile" data-house-section="rooms"><span>⌂</span><strong>Rooms</strong><small>Tasks, notes & projects by area</small></button>
+<button class="house-tile" data-house-section="systems"><span>⚙</span><strong>Systems</strong><small>Furnace, water heater, appliances</small></button>
+<button class="house-tile" data-house-section="projects"><span>◇</span><strong>Projects</strong><small>Repairs & improvements</small></button>
+<button class="house-tile" data-house-section="reference"><span>▤</span><strong>Home Reference</strong><small>Paint, filters, measurements & more</small></button>
+<button class="house-tile" data-house-section="history"><span>◷</span><strong>History</strong><small>What was done and when</small></button>
+</div>
+
+<div class="section-title">HOME KNOWLEDGE</div>
+<div class="knowledge-list" id="knowledgeList"></div>
+</section>
+
+<section class="screen" data-screen="stewardship">
+<header class="subnav"><button data-go="household">‹</button><strong>Stewardship</strong><button class="menu-dot">•••</button></header>
+<div class="section-intro"><div class="eyebrow">YOUR HOME'S LIVING MANUAL</div><h2>Things worth knowing before you need them.</h2></div>
+<div id="stewardshipList" class="stack"></div>
+</section>
+
+<section class="screen" data-screen="rooms">
+<header class="subnav"><button data-go="household">‹</button><strong>Rooms & Areas</strong><button class="menu-dot">•••</button></header>
+<div class="section-intro"><h2>Your actual home.</h2><p>Organize tending, projects, and notes around the places they belong.</p></div>
+<div id="roomsGrid" class="room-grid"></div>
+<button class="inline-add" id="addRoomBtn">+ Add room or area</button>
+</section>
+
+<section class="screen" data-screen="systems">
+<header class="subnav"><button data-go="household">‹</button><strong>Systems & Appliances</strong><button class="menu-dot">•••</button></header>
+<div class="section-intro"><h2>Know what keeps your home running.</h2><p>Save the useful details you never want to hunt for again.</p></div>
+<div id="systemsList" class="stack"></div>
+<button class="inline-add" id="addSystemBtn">+ Add system or appliance</button>
+</section>
+
+<section class="screen" data-screen="projects">
+<header class="subnav"><button data-go="household">‹</button><strong>Projects & Repairs</strong><button class="menu-dot">•••</button></header>
+<div class="section-intro"><h2>Fix, improve, finish.</h2><p>Keep projects simple until they need more detail.</p></div>
+<div id="projectsList" class="stack"></div>
+<button class="inline-add" id="addProjectBtn">+ Add project</button>
+</section>
+
+<section class="screen" data-screen="reference">
+<header class="subnav"><button data-go="household">‹</button><strong>Home Reference</strong><button class="menu-dot">•••</button></header>
+<div class="section-intro"><h2>Useful things worth remembering.</h2><p>Filter sizes, paint colors, measurements, locations, and more.</p></div>
+<div id="referenceList" class="stack"></div>
+<button class="inline-add" id="addReferenceBtn">+ Add reference</button>
+</section>
+
+<section class="screen" data-screen="history">
+<header class="subnav"><button data-go="household">‹</button><strong>Maintenance History</strong><button class="menu-dot">•••</button></header>
+<div class="section-intro"><h2>Your home's record.</h2><p>Completed stewardship items and maintenance show up here automatically.</p></div>
+<div id="historyList" class="stack"></div>
+</section>
+
+<section class="screen" data-screen="faith">
+<header class="subnav"><button data-go="today">‹</button><strong>Scripture</strong><button class="menu-dot">•••</button></header>
+<div class="faith-page"><div class="center eyebrow">TODAY'S WORD</div><h2 class="faith-title">Colossians 3:23</h2><blockquote>Whatever you do, work heartily, as for the Lord and not for men.</blockquote><div class="center source">World English Bible</div></div>
+</section>
+
+<section class="screen" data-screen="commonplace"><header class="hero-header small-head"><div><div class="eyebrow">COMMONPLACE</div><h1>Things worth<br>keeping.</h1></div></header><div class="placeholder-card">Commonplace comes after Household is stable.</div></section>
+<section class="screen" data-screen="seasonal"><header class="hero-header small-head"><div><div class="eyebrow">SEASONAL</div><h1>August<br>at home.</h1></div></header><div class="placeholder-card">Seasonal will use this same design system.</div></section>
+</main>
+
+<nav class="bottom-nav">
+<button data-go="today" class="active"><span>⌂</span><small>Today</small></button>
+<button data-go="commonplace"><span>▤</span><small>Commonplace</small></button>
+<button class="add-button" id="quickAdd">＋</button>
+<button data-go="seasonal"><span>☼</span><small>Seasonal</small></button>
+<button data-go="household"><span>⌂</span><small>Household</small></button>
+</nav>
+</div>
+
+<dialog id="sheet"><div class="sheet"><div class="grab"></div><button class="close-sheet" id="closeSheet">×</button><div id="sheetBody"></div></div></dialog>
+<script src="app.js"></script>
+</body></html>
